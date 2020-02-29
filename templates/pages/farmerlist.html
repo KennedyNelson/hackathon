@@ -1,0 +1,18 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+
+{% block title %}Add Post{% endblock title %}
+
+{% block content %}
+<ol>
+    {% for farmer in farmers %}
+    <h3>Name: {{farmer.name}}</h3>
+    <h3>Item: {{farmer.item}}</h3>
+    <h3>Weight: {{farmer.weight}}</h3><br>
+
+    {% endfor %}
+</ol>
+{% endblock content %}
