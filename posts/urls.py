@@ -10,6 +10,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', views.home, name='home'),
     path('home/', include('pages.urls')),
+    path('createqr/', include('pages.urls')),
 ]
 
 if settings.DEBUG:

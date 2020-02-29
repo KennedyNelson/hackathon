@@ -46,3 +46,11 @@ class PostListingView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['posts'] = Post.objects.all()
         return context
+
+def createqr(request):
+    data = Farmer.objects.filter(pk=1)
+    context = {
+        'data' : data
+    }
+
+    return render(request, 'pages/qr.html', context)
