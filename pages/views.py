@@ -48,7 +48,7 @@ class PostListingView(TemplateView):
         return context
 
 def createqr(request):
-    data = Farmer.objects.filter(pk=1)
+    data = Farmer.objects.get(id=1)
     context = {
         'data' : data
     }
