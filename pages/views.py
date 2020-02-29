@@ -4,8 +4,6 @@ from django.shortcuts import render, redirect
 from .models import Post,Farmer
 from .forms import Farmerform
 
-def home(request):
-     return render(request, 'pages/home.html')
 
 def add(request):
     form = Farmerform(request.POST or None)
