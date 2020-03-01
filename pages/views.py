@@ -48,9 +48,5 @@ class PostListingView(TemplateView):
         return context
 
 def createqr(request):
-    data = Farmer.objects.get(id=1)
-    context = {
-        'data' : data
-    }
 
-    return render(request, 'pages/qr.html', context)
+    return render(request, 'pages/qr.html')
